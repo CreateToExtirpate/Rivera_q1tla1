@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Since I am familiar with Bootstrap for css, I have incorporated it into my project.
+I used it for styling purposes, but still used the basic tags of HTML for Webpage structure and layout-->
+<style>
+  #bgImg {
+    background-image: url("cardboardBg.jpg");
+    height: 100vh;
+  }
+
+  /*I had some assistance from copilot for this darkened bg.
+  I could not figure out how to do it with little css properties*/
+  #bgImg::before {
+    content: "";
+    inset: 0;
+    z-index: -1;
+    filter: brightness(70%);
+    width: 100vw;
+    height: 100vh;
+    background: inherit;
+    position: fixed;
+  }
+
+  body {
+    font-family: "Courier New", Courier, monospace !important;
+    color: white !important;
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" />
+  <title>Chan's Page</title>
+</head>
+
+<body id="bgImg" class="shadow-2-strong">
+  <!--HEADER-->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="d-flex align-items-center gap-5">
+        <h3 class="ms-3 mb-0">
+          <strong class="navbar-text text-white">Chan's Page</strong>
+        </h3>
+        <h4>
+          <ins>
+            <a class="nav-link text-white mt-1" href="https://github.com/CreateToExtirpate">GitHub</a>
+          </ins>
+        </h4>
+        <h4>
+          <ins>
+            <a class="nav-link text-white mt-1" href="https://github.com/CreateToExtirpate">Project</a>
+          </ins>
+        </h4>
+      </div>
+    </nav>
+  </header>
+  <!--HEADER END-->
+
+  <!--MAIN CONTENT-->
+  <div class="container pt-5 col-9">
+    <h5>Hello, you have reached</h5>
+    <h1 class="display-3">CHANTAL'S PAGE</h1>
+    <div class="row pt-3 align-items-center">
+      <div class="col-md-4">
+        <img class="w-75 h-auto" src="ChanPic.jpg" alt="I love this photo but it's old." />
+      </div>
+      <div class="col-md-8">
+        <div class="card bg-dark opacity-75">
+          <div class="card-body text-white">
+            <h1>Project Name: Rivera_q1tla1</h1>
+            <h3>About Me:</h3>
+            <ul class="fs-5">
+              <li>My name is Chantal Ylizabeth Monterde Rivera.</li>
+              <li>I like cats, whales, and every other abomination.</li>
+              <li>I like doing school work, programming included</li>
+              <li>I create digital art, but I lack time.</li>
+              <li>I picked up HTML and CSS(Bootstrap) because of my SHS mini-capstone.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--MAIN CONTENT END-->
+
+  <!--FOOTER-->
+  <footer class="text-center mt-5">
+    <p>&copy; 2024 Chantal Rivera</p>
+  </footer>
+  <!--FOOTER END-->
+</body>
+</html>
